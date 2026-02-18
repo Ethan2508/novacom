@@ -19,22 +19,16 @@ export default function TrustSection({ partners }: TrustSectionProps) {
           Nos<span className="text-nude"> clients</span>
         </h2>
 
-        {/* Liste fluide de noms — inline flow comme theupper.studio */}
-        <div className="leading-relaxed md:leading-loose">
-          {partners.map((partner, index) => (
-            <span key={partner.name}>
-              <Link
-                href={`/clients/${partner.slug}`}
-                className="font-sans text-2xl md:text-4xl lg:text-5xl font-extralight tracking-wide text-bordeaux/40 transition-all duration-500 hover:text-bordeaux"
-              >
-                {partner.name}
-              </Link>
-              {index < partners.length - 1 && (
-                <span className="font-sans text-2xl md:text-4xl lg:text-5xl font-extralight text-nude/50 mx-3 md:mx-5 select-none">
-                  /
-                </span>
-              )}
-            </span>
+        {/* Grille multi-colonnes */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-8 md:gap-x-12">
+          {partners.map((partner) => (
+            <Link
+              key={partner.name}
+              href={`/clients/${partner.slug}`}
+              className="font-sans text-lg md:text-xl lg:text-2xl font-light tracking-wide text-bordeaux/40 transition-all duration-500 hover:text-bordeaux"
+            >
+              {partner.name}
+            </Link>
           ))}
         </div>
       </div>
