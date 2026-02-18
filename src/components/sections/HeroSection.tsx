@@ -55,7 +55,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-sans text-xs uppercase tracking-[0.3em] text-creme/60 mb-6"
+            className="font-sans text-xs uppercase tracking-[0.3em] text-accent mb-6"
           >
             Agence de communication créative
           </motion.p>

@@ -25,7 +25,7 @@ export default function SectionHeader({
   const alignClass = align === "center" ? "text-center mx-auto" : "";
   const textColor = light ? "text-creme" : "text-bordeaux";
   const subtextColor = light ? "text-creme/60" : "text-bordeaux/60";
-  const labelColor = light ? "text-creme/50" : "text-nude-dark";
+  const labelColor = light ? "text-creme/50" : "text-accent";
 
   return (
     <div className={`max-w-3xl mb-16 md:mb-20 ${alignClass}`}>

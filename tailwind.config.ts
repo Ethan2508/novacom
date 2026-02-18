@@ -25,6 +25,9 @@ const config: Config = {
           light: "#d4c4b2",
           dark: "#a88e75",
         },
+        accent: {
+          DEFAULT: "#f37021",
+        },
       },
 
       /* ─── Typographies ─── */

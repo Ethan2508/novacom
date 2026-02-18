@@ -68,7 +68,7 @@ export default function Header() {
                 useDarkText ? "text-bordeaux" : "text-creme"
               } ${
                 pathname === item.href
-                  ? "after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-px after:bg-current"
+                  ? "after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-accent"
                   : "hover:opacity-70"
               }`}
             >
