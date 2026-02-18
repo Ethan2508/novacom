@@ -47,8 +47,12 @@ export default function Header() {
             alt="Novacom"
             width={140}
             height={40}
-            className={`h-8 w-auto object-contain transition-all duration-400 ${
-              useDarkText || isMobileMenuOpen ? "" : "brightness-0 invert"
+            className={`h-6 md:h-8 w-auto object-contain transition-all duration-400 ${
+              isMobileMenuOpen
+                ? "brightness-0 invert"
+                : useDarkText
+                ? ""
+                : "brightness-0 invert"
             }`}
             priority
           />
@@ -94,7 +98,7 @@ export default function Header() {
           <span
             className={`block h-px w-full transition-all duration-400 ${
               isMobileMenuOpen
-                ? "rotate-45 translate-y-[3px] bg-bordeaux"
+                ? "rotate-45 translate-y-[3px] bg-creme"
                 : useDarkText
                 ? "bg-bordeaux"
                 : "bg-creme"
@@ -103,7 +107,7 @@ export default function Header() {
           <span
             className={`block h-px w-full transition-all duration-400 ${
               isMobileMenuOpen
-                ? "-rotate-45 -translate-y-[3px] bg-bordeaux"
+                ? "-rotate-45 -translate-y-[3px] bg-creme"
                 : useDarkText
                 ? "bg-bordeaux"
                 : "bg-creme"
@@ -116,33 +120,57 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-creme flex items-center justify-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
+            className="fixed inset-0 z-40 bg-bordeaux"
           >
-            <nav className="flex flex-col items-center gap-8">
-              {navigation.map((item, index) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.4 }}
-                >
-                  <Link
-                    href={item.href}
-                    className={`font-serif text-display-md italic transition-colors duration-400 ${
-                      pathname === item.href
-                        ? "text-nude"
-                        : "text-bordeaux hover:text-nude"
-                    }`}
+            <div className="flex flex-col justify-between h-full pt-28 pb-10 px-8">
+              {/* Navigation */}
+              <nav className="flex flex-col gap-6">
+                {navigation.map((item, index) => (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + index * 0.08, duration: 0.4 }}
                   >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
+                    <Link
+                      href={item.href}
+                      className={`font-serif text-4xl italic transition-colors duration-400 ${
+                        pathname === item.href
+                          ? "text-nude"
+                          : "text-creme hover:text-nude"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </nav>
+
+              {/* Infos contact en bas */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.4 }}
+                className="flex flex-col gap-3 border-t border-creme/20 pt-6"
+              >
+                <a
+                  href="mailto:contact@nova-com.fr"
+                  className="font-sans text-sm text-creme/60 hover:text-creme transition-colors"
+                >
+                  contact@nova-com.fr
+                </a>
+                <a
+                  href="tel:+33778510655"
+                  className="font-sans text-sm text-creme/60 hover:text-creme transition-colors"
+                >
+                  07 78 51 06 55
+                </a>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

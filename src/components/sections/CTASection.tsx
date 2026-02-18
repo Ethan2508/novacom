@@ -21,14 +21,14 @@ export default function CTASection() {
           <Button
             href="/contact"
             variant="outline"
-            className="border-creme text-creme hover:bg-creme hover:text-bordeaux"
+            className="border-creme text-creme hover:text-bordeaux [&::before]:bg-creme"
           >
             Nous contacter
           </Button>
           <Button
             href="/portfolio-novacom.pdf"
             variant="outline"
-            className="border-creme/30 text-creme/70 hover:border-creme hover:text-creme hover:bg-transparent"
+            className="border-creme/30 text-creme/70 hover:text-bordeaux hover:border-creme [&::before]:bg-creme"
             external
           >
             Voir le portfolio ↗
