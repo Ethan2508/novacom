@@ -4,10 +4,8 @@ import { Client, Service, HeroSettings, Expertise, TrustPartner, NavItem } from 
 export const navigation: NavItem[] = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/about" },
-  { label: "La fondatrice", href: "/fondatrice" },
   { label: "Services", href: "/services" },
   { label: "Clients", href: "/clients" },
-  { label: "Contact", href: "/contact" },
 ];
 
 /* ─── Hero Settings ─── */

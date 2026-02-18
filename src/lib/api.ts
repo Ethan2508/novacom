@@ -21,11 +21,17 @@ import type { Client, Service, HeroSettings, Expertise, TrustPartner } from "@/t
 
 /* ─── Helpers ─── */
 
-/** Transformer un logo Sanity en URL d'image */
+/** Transformer un logo Sanity en URL d'image + résoudre la galerie */
 function resolveClientLogo(client: any): Client {
   return {
     ...client,
     logo: client.logo ? urlFor(client.logo).width(200).url() : "",
+    gallery: client.gallery
+      ? client.gallery.map((img: any) => ({
+          ...img,
+          url: urlFor(img.asset).width(800).url(),
+        }))
+      : [],
   };
 }
 

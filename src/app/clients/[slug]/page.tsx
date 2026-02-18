@@ -140,6 +140,34 @@ export default async function ClientPage({ params }: ClientPageProps) {
         </div>
       </section>
 
+      {/* Galerie photos */}
+      {client.gallery && client.gallery.length > 0 && (
+        <section className="section-padding bg-creme">
+          <div className="container-wide">
+            <ScrollReveal>
+              <p className="font-sans text-xs uppercase tracking-[0.2em] text-nude-dark mb-10">
+                Galerie
+              </p>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {client.gallery.map((img, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+                    <Image
+                      src={img.url || ""}
+                      alt={img.alt || `${client.name} — photo ${index + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Navigation vers d'autres projets */}
       <section className="section-padding bg-creme">
         <div className="container-wide text-center">

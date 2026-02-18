@@ -79,7 +79,7 @@ export default function Header() {
           {/* CTA Contact */}
           <Link
             href="/contact"
-            className={`text-sm font-sans font-medium uppercase tracking-widest px-6 py-3 border transition-all duration-400 ${
+            className={`text-sm font-sans font-medium uppercase tracking-widest px-6 py-3 border rounded-full transition-all duration-400 ${
               useDarkText
                 ? "border-bordeaux text-bordeaux hover:bg-bordeaux hover:text-creme"
                 : "border-creme text-creme hover:bg-creme hover:text-bordeaux"

@@ -12,6 +12,7 @@ export interface Client {
   date: string;
   order: number;
   featured: boolean;
+  gallery?: { asset: any; alt?: string; url?: string }[];
 }
 
 /** Catégories de clients */

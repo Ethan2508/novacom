@@ -119,7 +119,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Approche humaine */}
+      {/* La fondatrice */}
       <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <div className="aspect-[4/5] relative overflow-hidden rounded-2xl">
                 <Image
                   src="/images/fondatrice.jpg"
-                  alt="Fondatrice de Novacom"
+                  alt="Rackel Teboul, fondatrice de Novacom"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -137,15 +137,26 @@ export default function AboutPage() {
 
             <div>
               <SectionHeader
-                label="Notre approche"
-                title="Humaine, créative<br/>& sans compromis."
+                label="La fondatrice"
+                title="Rackel Teboul"
               />
               <ScrollReveal delay={0.2}>
-                <div className="space-y-6 font-sans text-body-md text-bordeaux/70">
+                <div className="space-y-5 font-sans text-body-md text-bordeaux/70 leading-relaxed">
                   <p>
-                    Chaque projet est unique, chaque client est écouté, chaque stratégie
-                    est pensée sur-mesure. Notre force : la créativité alliée à la rigueur.
+                    Passionnée par la communication et le digital, Rackel a fondé Novacom
+                    avec une conviction : chaque marque mérite une communication à la
+                    hauteur de ses ambitions.
                   </p>
+                  <p>
+                    Son expérience dans des secteurs variés — mode, beauté, immobilier,
+                    événementiel, hôtellerie — lui a permis de développer une approche
+                    alliant créativité, stratégie et proximité.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
+                <div className="pt-8">
+                  <Button href="/contact">Travaillons ensemble</Button>
                 </div>
               </ScrollReveal>
             </div>

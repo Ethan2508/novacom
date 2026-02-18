@@ -48,8 +48,8 @@ export default function HeroSection({ settings }: HeroSectionProps) {
       />
 
       {/* Contenu */}
-      <div className="relative z-10 container-wide text-center md:text-left">
-        <div className="max-w-4xl">
+      <div className="relative z-10 container-wide text-center">
+        <div className="max-w-4xl mx-auto">
           {/* Label */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="font-sans text-sm md:text-body-lg text-creme/70 max-w-2xl mb-12"
+            className="font-sans text-sm md:text-body-lg text-creme/70 max-w-2xl mx-auto mb-12"
           >
             {settings.subtitle}
           </motion.p>

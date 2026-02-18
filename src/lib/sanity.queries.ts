@@ -47,7 +47,11 @@ export const clientBySlugQuery = `
     category,
     date,
     order,
-    featured
+    featured,
+    gallery[] {
+      asset,
+      alt
+    }
   }
 `;
 
