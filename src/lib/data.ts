@@ -6,6 +6,7 @@ export const navigation: NavItem[] = [
   { label: "À propos", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Clients", href: "/clients" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /* ─── Hero Settings ─── */

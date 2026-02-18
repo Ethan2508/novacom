@@ -74,7 +74,7 @@ export default function Header() {
 
           {/* CTA Contact */}
           <Link
-            href="mailto:contact@nova-com.fr"
+            href="/contact"
             className={`text-sm font-sans font-medium uppercase tracking-widest px-6 py-3 border transition-all duration-400 ${
               useDarkText
                 ? "border-bordeaux text-bordeaux hover:bg-bordeaux hover:text-creme"

@@ -23,7 +23,7 @@ export default function Footer() {
             prochaine ambition.
           </h2>
           <a
-            href="mailto:contact@nova-com.fr"
+            href="/contact"
             className="inline-flex items-center gap-3 border border-creme text-creme px-8 py-4 text-sm font-sans font-medium uppercase tracking-widest transition-all duration-400 hover:bg-creme hover:text-bordeaux hover:gap-4"
           >
             Nous contacter

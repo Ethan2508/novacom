@@ -19,7 +19,7 @@ export default function CTASection() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
-            href="mailto:contact@nova-com.fr"
+            href="/contact"
             variant="outline"
             className="border-creme text-creme hover:bg-creme hover:text-bordeaux"
           >
