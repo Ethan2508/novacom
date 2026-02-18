@@ -100,7 +100,7 @@ export default function Footer() {
                 07 78 51 06 55
               </a>
               <a
-                href="https://instagram.com/novacom"
+                href="https://www.instagram.com/novacomm_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-creme transition-colors duration-400"
@@ -108,7 +108,7 @@ export default function Footer() {
                 Instagram
               </a>
               <a
-                href="https://linkedin.com/company/novacom"
+                href="https://www.linkedin.com/in/rackel-teboul-336403251/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-creme transition-colors duration-400"

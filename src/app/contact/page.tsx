@@ -258,7 +258,7 @@ export default function ContactPage() {
                   </p>
                   <div className="flex flex-col gap-3">
                     <a
-                      href="https://instagram.com/novacom"
+                      href="https://www.instagram.com/novacomm_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-sans text-body-md text-bordeaux/70 hover:text-bordeaux transition-colors duration-400"
@@ -266,7 +266,7 @@ export default function ContactPage() {
                       Instagram
                     </a>
                     <a
-                      href="https://linkedin.com/company/novacom"
+                      href="https://www.linkedin.com/in/rackel-teboul-336403251/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-sans text-body-md text-bordeaux/70 hover:text-bordeaux transition-colors duration-400"
