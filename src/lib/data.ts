@@ -4,6 +4,7 @@ import { Client, Service, HeroSettings, Expertise, TrustPartner, NavItem } from 
 export const navigation: NavItem[] = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/about" },
+  { label: "La fondatrice", href: "/fondatrice" },
   { label: "Services", href: "/services" },
   { label: "Clients", href: "/clients" },
   { label: "Contact", href: "/contact" },
@@ -45,6 +46,18 @@ export const expertises: Expertise[] = [
     description:
       "Nous développons des identités de marque fortes, cohérentes et mémorables qui vous démarquent.",
     icon: "branding",
+  },
+  {
+    title: "Organisation de shooting",
+    description:
+      "De la direction artistique au rendu final, nous organisons vos shootings photo et vidéo de A à Z.",
+    icon: "shooting",
+  },
+  {
+    title: "Création print & logo",
+    description:
+      "Conception de logos, flyers, plaquettes commerciales et tous supports print pour renforcer votre image.",
+    icon: "print",
   },
 ];
 

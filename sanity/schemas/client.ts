@@ -85,6 +85,27 @@ const client = {
       description: "Afficher ce client sur la page d'accueil",
       initialValue: false,
     },
+    {
+      name: "gallery",
+      title: "Galerie photos",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              title: "Texte alternatif",
+              type: "string",
+            },
+          ],
+        },
+      ],
+      description: "Ajoutez les photos de vos réalisations pour ce client",
+    },
   ],
   orderings: [
     {
