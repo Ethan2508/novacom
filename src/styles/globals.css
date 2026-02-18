@@ -66,17 +66,53 @@
 
   /* Bouton principal */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-bordeaux text-creme px-8 py-4 
+    @apply inline-flex items-center gap-3 bg-bordeaux text-creme px-8 py-4 
            text-sm font-sans font-medium uppercase tracking-widest 
-           transition-all duration-400 
-           hover:bg-bordeaux-light hover:gap-3;
+           transition-all duration-500 ease-out relative overflow-hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-creme;
+    transform: translateX(-101%);
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .btn-primary:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-primary:hover {
+    @apply text-bordeaux gap-4;
+  }
+
+  .btn-primary > * {
+    @apply relative z-10;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-bordeaux text-bordeaux px-8 py-4 
+    @apply inline-flex items-center gap-3 border border-bordeaux text-bordeaux px-8 py-4 
            text-sm font-sans font-medium uppercase tracking-widest 
-           transition-all duration-400 
-           hover:bg-bordeaux hover:text-creme hover:gap-3;
+           transition-all duration-500 ease-out relative overflow-hidden;
+  }
+
+  .btn-outline::before {
+    content: '';
+    @apply absolute inset-0 bg-bordeaux;
+    transform: translateX(-101%);
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .btn-outline:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-outline:hover {
+    @apply text-creme border-bordeaux gap-4;
+  }
+
+  .btn-outline > * {
+    @apply relative z-10;
   }
 
   /* Ligne décorative */

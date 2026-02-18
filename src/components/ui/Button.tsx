@@ -12,7 +12,7 @@ interface ButtonProps {
 
 /**
  * Button — Bouton réutilisable Novacom
- * Peut être un lien ou un bouton selon la prop `href`
+ * Effets hover : slide-in background + flèche glide
  */
 export default function Button({
   href,
@@ -23,22 +23,25 @@ export default function Button({
   external = false,
 }: ButtonProps) {
   const baseClass = variant === "primary" ? "btn-primary" : "btn-outline";
-  const combinedClass = `${baseClass} ${className}`;
+  const combinedClass = `${baseClass} ${className} group`;
 
-  const arrow = (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      className="transition-transform duration-400"
-    >
-      <path
-        d="M1 8H15M15 8L8 1M15 8L8 15"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-    </svg>
+  const content = (
+    <>
+      <span>{children}</span>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        className="transition-transform duration-500 ease-out group-hover:translate-x-1"
+      >
+        <path
+          d="M1 8H15M15 8L8 1M15 8L8 15"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </>
   );
 
   if (href) {
@@ -50,23 +53,20 @@ export default function Button({
           rel="noopener noreferrer"
           className={combinedClass}
         >
-          {children}
-          {arrow}
+          {content}
         </a>
       );
     }
     return (
       <Link href={href} className={combinedClass}>
-        {children}
-        {arrow}
+        {content}
       </Link>
     );
   }
 
   return (
     <button onClick={onClick} className={combinedClass}>
-      {children}
-      {arrow}
+      {content}
     </button>
   );
 }
