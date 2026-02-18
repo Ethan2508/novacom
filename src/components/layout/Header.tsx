@@ -1,0 +1,151 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { navigation } from "@/lib/data";
+
+/**
+ * Header — Navigation principale Novacom
+ * Fixe, transparent sur le hero, fond crème au scroll
+ */
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Seule la homepage a un hero sombre → texte clair
+  const isHomepage = pathname === "/";
+  const useDarkText = !isHomepage || isScrolled;
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fermer le menu mobile lors du changement de page
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ${
+        isScrolled
+          ? "bg-creme/95 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <div className="container-wide flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="relative z-50">
+          <Image
+            src="/images/logo-novacom.png"
+            alt="Novacom"
+            width={140}
+            height={40}
+            className={`h-8 w-auto object-contain transition-all duration-400 ${
+              useDarkText || isMobileMenuOpen ? "" : "brightness-0 invert"
+            }`}
+            priority
+          />
+        </Link>
+
+        {/* Navigation Desktop */}
+        <nav className="hidden md:flex items-center gap-10">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`relative font-sans text-sm uppercase tracking-widest transition-colors duration-400 ${
+                useDarkText ? "text-bordeaux" : "text-creme"
+              } ${
+                pathname === item.href
+                  ? "after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-px after:bg-current"
+                  : "hover:opacity-70"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          {/* CTA Contact */}
+          <Link
+            href="mailto:contact@nova-com.fr"
+            className={`text-sm font-sans font-medium uppercase tracking-widest px-6 py-3 border transition-all duration-400 ${
+              useDarkText
+                ? "border-bordeaux text-bordeaux hover:bg-bordeaux hover:text-creme"
+                : "border-creme text-creme hover:bg-creme hover:text-bordeaux"
+            }`}
+          >
+            Nous contacter
+          </Link>
+        </nav>
+
+        {/* Burger Mobile */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="relative z-50 md:hidden w-8 h-8 flex flex-col justify-center gap-1.5"
+          aria-label="Menu"
+        >
+          <span
+            className={`block h-px w-full transition-all duration-400 ${
+              isMobileMenuOpen
+                ? "rotate-45 translate-y-[3px] bg-bordeaux"
+                : useDarkText
+                ? "bg-bordeaux"
+                : "bg-creme"
+            }`}
+          />
+          <span
+            className={`block h-px w-full transition-all duration-400 ${
+              isMobileMenuOpen
+                ? "-rotate-45 -translate-y-[3px] bg-bordeaux"
+                : useDarkText
+                ? "bg-bordeaux"
+                : "bg-creme"
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Menu Mobile Fullscreen */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-40 bg-creme flex items-center justify-center"
+          >
+            <nav className="flex flex-col items-center gap-8">
+              {navigation.map((item, index) => (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
+                >
+                  <Link
+                    href={item.href}
+                    className={`font-serif text-display-md italic transition-colors duration-400 ${
+                      pathname === item.href
+                        ? "text-nude"
+                        : "text-bordeaux hover:text-nude"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
