@@ -117,7 +117,7 @@
 
   /* Ligne décorative */
   .divider {
-    @apply w-16 h-px bg-accent;
+    @apply w-16 h-px bg-nude;
   }
 
   .divider-wide {
