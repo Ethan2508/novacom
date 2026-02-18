@@ -20,7 +20,7 @@ export default function ClientCard({ client, index = 0 }: ClientCardProps) {
         href={`/clients/${client.slug}`}
         className="group block"
       >
-        <article className="bg-white border border-creme-dark/20 p-8 md:p-10 transition-all duration-600 hover:shadow-lg hover:border-nude/50">
+        <article className="bg-white border border-creme-dark/20 p-8 md:p-10 transition-all duration-600 hover:shadow-lg hover:border-nude/50 rounded-2xl">
           {/* En-tête : logo + catégorie */}
           <div className="flex items-start justify-between mb-8">
             <div className="w-16 h-16 bg-creme rounded-sm flex items-center justify-center overflow-hidden">

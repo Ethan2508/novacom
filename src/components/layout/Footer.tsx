@@ -24,7 +24,7 @@ export default function Footer() {
           </h2>
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 border border-creme text-creme px-8 py-4 text-sm font-sans font-medium uppercase tracking-widest transition-all duration-400 hover:bg-creme hover:text-bordeaux hover:gap-4"
+            className="inline-flex items-center gap-3 border border-creme text-creme px-8 py-4 text-sm font-sans font-medium uppercase tracking-widest transition-all duration-400 hover:bg-creme hover:text-bordeaux hover:gap-4 rounded-full"
           >
             Nous contacter
             <svg

@@ -22,7 +22,7 @@ export default function FondatricePage() {
         <div className="container-wide">
           <SectionHeader
             label="La fondatrice"
-            title="Le visage derrière<br/>Novacom."
+            title="La fondatrice."
           />
         </div>
       </section>
@@ -33,7 +33,7 @@ export default function FondatricePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
             {/* Photo */}
             <ScrollReveal>
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
                   src="/images/fondatrice.jpg"
                   alt="Fondatrice de Novacom"

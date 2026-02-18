@@ -45,15 +45,12 @@ export default function AboutPage() {
             <ScrollReveal delay={0.2}>
               <div className="space-y-6 font-sans text-body-md text-bordeaux/70">
                 <p>
-                  Chez Novacom, nous croyons que la communication est bien plus qu&apos;un 
-                  simple outil marketing. C&apos;est un levier stratégique qui, lorsqu&apos;il est 
-                  maîtrisé, transforme la perception d&apos;une marque et accélère sa croissance.
+                  Chez Novacom, nous croyons que la communication est un levier stratégique
+                  qui transforme la perception d&apos;une marque et accélère sa croissance.
                 </p>
                 <p>
-                  Notre mission est d&apos;accompagner les entreprises ambitieuses dans la 
-                  construction d&apos;une présence digitale forte, cohérente et mémorable. 
-                  De la stratégie à l&apos;exécution, nous prenons en charge l&apos;intégralité 
-                  de votre communication.
+                  Notre mission : accompagner les entreprises ambitieuses dans la construction
+                  d&apos;une présence forte, cohérente et mémorable.
                 </p>
               </div>
             </ScrollReveal>
@@ -100,7 +97,7 @@ export default function AboutPage() {
               },
             ].map((expertise, index) => (
               <ScrollReveal key={index} delay={index * 0.15}>
-                <div className="bg-white p-10 border border-creme-dark/15">
+                <div className="bg-white p-10 border border-creme-dark/15 rounded-2xl">
                   <h3 className="font-serif text-xl italic text-bordeaux mb-6">
                     {expertise.title}
                   </h3>
@@ -127,7 +124,7 @@ export default function AboutPage() {
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             <ScrollReveal>
-              <div className="aspect-[4/5] relative overflow-hidden">
+              <div className="aspect-[4/5] relative overflow-hidden rounded-2xl">
                 <Image
                   src="/images/fondatrice.jpg"
                   alt="Fondatrice de Novacom"
@@ -146,14 +143,8 @@ export default function AboutPage() {
               <ScrollReveal delay={0.2}>
                 <div className="space-y-6 font-sans text-body-md text-bordeaux/70">
                   <p>
-                    Nous ne sommes pas une agence de plus. Nous sommes votre partenaire 
-                    de communication. Chaque projet est unique, chaque client est écouté, 
-                    chaque stratégie est pensée sur-mesure.
-                  </p>
-                  <p>
-                    Notre force ? Une équipe créative et passionnée, une approche rigoureuse 
-                    basée sur la data, et une obsession pour la qualité qui se retrouve dans 
-                    chaque livrable.
+                    Chaque projet est unique, chaque client est écouté, chaque stratégie
+                    est pensée sur-mesure. Notre force : la créativité alliée à la rigueur.
                   </p>
                 </div>
               </ScrollReveal>

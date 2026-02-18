@@ -204,7 +204,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center gap-3 bg-bordeaux text-creme px-10 py-4 font-sans text-sm uppercase tracking-widest transition-all duration-400 hover:bg-bordeaux/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="inline-flex items-center gap-3 bg-bordeaux text-creme px-10 py-4 font-sans text-sm uppercase tracking-widest transition-all duration-400 hover:bg-bordeaux/90 disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
                   >
                     {isSubmitting ? "Envoi en cours..." : "Envoyer"}
                     <svg
