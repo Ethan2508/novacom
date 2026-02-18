@@ -22,7 +22,6 @@ NOVACOM VF_1.mp4
 PORTFOLIO NOVA COM.pdf
 *.mp4
 public/videos/
-public/portfolio-novacom.pdf
 
 # debug
 npm-debug.log*
