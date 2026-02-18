@@ -25,8 +25,8 @@ export default function ExpertisesSection({ expertises }: ExpertisesSectionProps
             <ScrollReveal key={index} delay={index * 0.1} direction="up">
               <div className="p-8 border border-accent hover:border-accent/70 transition-all duration-600 group rounded-2xl">
                 {/* Icône décorative */}
-                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/80 transition-colors duration-400">
-                  <span className="font-serif text-xl italic text-white">
+                <div className="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-6 group-hover:bg-nude/20 transition-colors duration-400">
+                  <span className="font-serif text-xl italic text-bordeaux">
                     {index + 1}
                   </span>
                 </div>
