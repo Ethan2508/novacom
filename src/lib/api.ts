@@ -21,11 +21,30 @@ import type { Client, Service, HeroSettings, Expertise, TrustPartner } from "@/t
 
 /* ─── Helpers ─── */
 
+/** Map slug → logo local */
+const LOCAL_LOGOS: Record<string, string> = {
+  "helena-joy": "/images/clients/helena-joy.png",
+  "raphaela-silk": "/images/clients/raphaela-silk.png",
+  "my-little-group": "/images/clients/mlg.png",
+  "pasino-grand": "/images/clients/pasino-grand.png",
+  "le-pavillon": "/images/clients/le-pavillon.png",
+  "burj-immo": "/images/clients/burj-immo.png",
+  "redskins": "/images/clients/redskins.png",
+  "she-is-fit": "/images/clients/she-is-fit.png",
+  "bat-melech-wigs": "/images/clients/bat-melech.png",
+  "maison-blaggio": "/images/clients/maison-blaggio.png",
+  "paclim": "/images/clients/paclim.png",
+  "street-connexion": "/images/clients/street-connexion.png",
+  "sweet-home": "/images/clients/sweet-home.png",
+};
+
 /** Transformer un logo Sanity en URL d'image + résoudre la galerie */
 function resolveClientLogo(client: any): Client {
+  const sanityLogo = client.logo ? urlFor(client.logo).width(200).url() : "";
+  const localLogo = LOCAL_LOGOS[client.slug] || "";
   return {
     ...client,
-    logo: client.logo ? urlFor(client.logo).width(200).url() : "",
+    logo: sanityLogo || localLogo,
     gallery: client.gallery
       ? client.gallery.map((img: any) => ({
           ...img,
