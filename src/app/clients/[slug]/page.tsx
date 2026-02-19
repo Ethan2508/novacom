@@ -105,6 +105,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                     width={200}
                     height={200}
                     className="object-contain"
+                    unoptimized={client.logo.startsWith("/images/")}
                   />
                 ) : (
                   <span className="font-serif text-8xl italic text-nude/30">

@@ -35,6 +35,7 @@ export default function TrustSection({ partners }: TrustSectionProps) {
                   width={140}
                   height={60}
                   className="max-h-12 md:max-h-14 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                  unoptimized={partner.logo.startsWith("/images/")}
                 />
               ) : (
                 <span className="font-sans text-base md:text-lg font-light tracking-wide text-bordeaux/50 group-hover:text-bordeaux transition-colors duration-500">

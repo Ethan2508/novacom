@@ -31,6 +31,7 @@ export default function ClientCard({ client, index = 0 }: ClientCardProps) {
                   width={48}
                   height={48}
                   className="object-contain"
+                  unoptimized={client.logo.startsWith("/images/")}
                 />
               ) : (
                 <span className="font-serif text-2xl italic text-bordeaux">
