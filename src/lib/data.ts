@@ -265,7 +265,7 @@ export const clients: Client[] = [
     _id: "8",
     name: "She Is Fit",
     slug: "she-is-fit",
-    logo: "",
+    logo: "/images/clients/she-is-fit.png",
     description:
       "Marque de sportswear féminin alliant performance, style et inclusivité.",
     mission:
@@ -356,7 +356,7 @@ export const trustPartners: TrustPartner[] = [
   { name: "Le Pavillon", logo: "/images/clients/le-pavillon.png", slug: "le-pavillon" },
   { name: "Burj Immo", logo: "/images/clients/burj-immo.png", slug: "burj-immo" },
   { name: "Redskins", logo: "/images/clients/redskins.png", slug: "redskins" },
-  { name: "She Is Fit", logo: "", slug: "she-is-fit" },
+  { name: "She Is Fit", logo: "/images/clients/she-is-fit.png", slug: "she-is-fit" },
   { name: "Bat Melech Wigs", logo: "/images/clients/bat-melech.png", slug: "bat-melech-wigs" },
   { name: "Maison Blaggio", logo: "/images/clients/maison-blaggio.png", slug: "maison-blaggio" },
   { name: "Paclim", logo: "/images/clients/paclim.png", slug: "paclim" },
