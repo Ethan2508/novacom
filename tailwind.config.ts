@@ -38,7 +38,7 @@ const config: Config = {
 
       /* ─── Espacements & tailles ─── */
       fontSize: {
-        "display-xl": ["clamp(3rem, 8vw, 7rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-xl": ["clamp(2.4rem, 8vw, 7rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
         "display-lg": ["clamp(2.5rem, 6vw, 5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         "display-md": ["clamp(2rem, 4vw, 3.5rem)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
         "body-lg": ["1.25rem", { lineHeight: "1.75" }],
