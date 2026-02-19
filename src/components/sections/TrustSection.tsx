@@ -34,7 +34,7 @@ export default function TrustSection({ partners }: TrustSectionProps) {
                   alt={partner.name}
                   width={140}
                   height={60}
-                  className="max-h-12 md:max-h-14 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="max-h-12 md:max-h-14 w-auto object-contain transition-all duration-500"
                   unoptimized={partner.logo.startsWith("/images/")}
                 />
               ) : (
