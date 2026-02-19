@@ -36,7 +36,7 @@ function resolveClientLogo(client: any): Client {
 }
 
 /** Exclure par défaut certains clients (fallback mock) */
-const EXCLUDED_CLIENTS = ["GAM Innovation", "Street Connexion"];
+const EXCLUDED_CLIENTS = ["GAM Innovation"];
 
 /* ─── Clients ─── */
 

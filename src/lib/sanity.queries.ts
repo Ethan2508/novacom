@@ -5,7 +5,7 @@
 
 /** Tous les clients (sauf exclus), triés par ordre */
 export const allClientsQuery = `
-  *[_type == "client" && !(name in ["GAM Innovation", "Street Connexion"])] | order(order asc) {
+  *[_type == "client" && !(name in ["GAM Innovation"])] | order(order asc) {
     _id,
     name,
     "slug": slug.current,
@@ -21,7 +21,7 @@ export const allClientsQuery = `
 
 /** Clients featured pour la homepage */
 export const featuredClientsQuery = `
-  *[_type == "client" && featured == true && !(name in ["GAM Innovation", "Street Connexion"])] | order(order asc) {
+  *[_type == "client" && featured == true && !(name in ["GAM Innovation"])] | order(order asc) {
     _id,
     name,
     "slug": slug.current,
