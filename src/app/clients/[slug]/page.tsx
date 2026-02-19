@@ -97,15 +97,12 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
             {/* Logo */}
             <ScrollReveal direction="right">
-              <div className="aspect-square bg-white border border-creme-dark/15 flex items-center justify-center p-8 md:p-16 rounded-2xl overflow-hidden">
+              <div className="aspect-square bg-white border border-creme-dark/15 flex items-center justify-center p-8 md:p-12 rounded-2xl">
                 {client.logo ? (
-                  <Image
+                  <img
                     src={client.logo}
                     alt={`Logo ${client.name}`}
-                    width={200}
-                    height={200}
-                    className="object-contain max-w-full max-h-full"
-                    unoptimized={client.logo.startsWith("/images/")}
+                    className="w-full h-auto max-h-full object-contain"
                   />
                 ) : (
                   <span className="font-serif text-8xl italic text-nude/30">
