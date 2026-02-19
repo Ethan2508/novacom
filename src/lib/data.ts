@@ -167,7 +167,7 @@ export const clients: Client[] = [
     _id: "1",
     name: "Helena Joy",
     slug: "helena-joy",
-    logo: "",
+    logo: "/images/clients/helena-joy.png",
     description:
       "Marque de cosmétiques haut de gamme spécialisée dans les soins naturels et le bien-être.",
     mission:
@@ -181,7 +181,7 @@ export const clients: Client[] = [
     _id: "2",
     name: "Raphaela Silk",
     slug: "raphaela-silk",
-    logo: "",
+    logo: "/images/clients/raphaela-silk.png",
     description:
       "Créatrice de mode éthique proposant des pièces en soie naturelle et matières nobles.",
     mission:
@@ -195,7 +195,7 @@ export const clients: Client[] = [
     _id: "3",
     name: "My Little Group",
     slug: "my-little-group",
-    logo: "",
+    logo: "/images/clients/mlg.png",
     description:
       "Groupe événementiel spécialisé dans l'organisation de soirées privées et événements corporate.",
     mission:
@@ -209,7 +209,7 @@ export const clients: Client[] = [
     _id: "4",
     name: "Pasino Grand",
     slug: "pasino-grand",
-    logo: "",
+    logo: "/images/clients/pasino-grand.png",
     description:
       "Complexe de divertissement premium alliant casino, restauration gastronomique et spectacles.",
     mission:
@@ -223,7 +223,7 @@ export const clients: Client[] = [
     _id: "5",
     name: "Le Pavillon",
     slug: "le-pavillon",
-    logo: "",
+    logo: "/images/clients/le-pavillon.png",
     description:
       "Hôtel boutique du Pasino, offrant une expérience d'hébergement luxueuse et personnalisée.",
     mission:
@@ -237,7 +237,7 @@ export const clients: Client[] = [
     _id: "6",
     name: "Burj Immo",
     slug: "burj-immo",
-    logo: "",
+    logo: "/images/clients/burj-immo.png",
     description:
       "Agence immobilière de prestige spécialisée dans les biens haut de gamme et l'investissement.",
     mission:
@@ -251,7 +251,7 @@ export const clients: Client[] = [
     _id: "7",
     name: "Redskins",
     slug: "redskins",
-    logo: "",
+    logo: "/images/clients/redskins.png",
     description:
       "Marque emblématique de prêt-à-porter et maroquinerie, connue pour ses blousons en cuir iconiques.",
     mission:
@@ -279,7 +279,7 @@ export const clients: Client[] = [
     _id: "9",
     name: "Bat Melech Wigs",
     slug: "bat-melech-wigs",
-    logo: "",
+    logo: "/images/clients/bat-melech.png",
     description:
       "Maison spécialisée dans les perruques de luxe et les solutions capillaires sur-mesure.",
     mission:
@@ -289,19 +289,79 @@ export const clients: Client[] = [
     order: 9,
     featured: true,
   },
+  {
+    _id: "10",
+    name: "Maison Blaggio",
+    slug: "maison-blaggio",
+    logo: "/images/clients/maison-blaggio.png",
+    description:
+      "Maison de mode masculine proposant des collections élégantes et contemporaines.",
+    mission:
+      "Stratégie de communication digitale, création de contenus et gestion des réseaux sociaux.",
+    category: "social-media",
+    date: "2024-12",
+    order: 10,
+    featured: true,
+  },
+  {
+    _id: "11",
+    name: "Paclim",
+    slug: "paclim",
+    logo: "/images/clients/paclim.png",
+    description:
+      "Entreprise spécialisée dans les solutions de climatisation et confort thermique.",
+    mission:
+      "Refonte de l'identité visuelle, création de supports print et développement de la présence digitale.",
+    category: "branding",
+    date: "2024-11",
+    order: 11,
+    featured: true,
+  },
+  {
+    _id: "12",
+    name: "Street Connexion",
+    slug: "street-connexion",
+    logo: "/images/clients/street-connexion.png",
+    description:
+      "Marque streetwear urbaine mêlant culture hip-hop et tendances contemporaines.",
+    mission:
+      "Direction artistique, shootings lookbook et stratégie social media pour renforcer l'image de marque.",
+    category: "global",
+    date: "2024-10",
+    order: 12,
+    featured: true,
+  },
+  {
+    _id: "13",
+    name: "Sweet Home",
+    slug: "sweet-home",
+    logo: "/images/clients/sweet-home.png",
+    description:
+      "Enseigne de décoration d'intérieur et d'ameublement haut de gamme.",
+    mission:
+      "Création de contenus visuels, stratégie Instagram et accompagnement en communication digitale.",
+    category: "contenu",
+    date: "2024-09",
+    order: 13,
+    featured: true,
+  },
 ];
 
 /* ─── Partenaires "Ils nous ont fait confiance" ─── */
 export const trustPartners: TrustPartner[] = [
-  { name: "Helena Joy", logo: "", slug: "helena-joy" },
-  { name: "Raphaela Silk", logo: "", slug: "raphaela-silk" },
-  { name: "My Little Group", logo: "", slug: "my-little-group" },
-  { name: "Pasino Grand", logo: "", slug: "pasino-grand" },
-  { name: "Le Pavillon", logo: "", slug: "le-pavillon" },
-  { name: "Burj Immo", logo: "", slug: "burj-immo" },
-  { name: "Redskins", logo: "", slug: "redskins" },
+  { name: "Helena Joy", logo: "/images/clients/helena-joy.png", slug: "helena-joy" },
+  { name: "Raphaela Silk", logo: "/images/clients/raphaela-silk.png", slug: "raphaela-silk" },
+  { name: "My Little Group", logo: "/images/clients/mlg.png", slug: "my-little-group" },
+  { name: "Pasino Grand", logo: "/images/clients/pasino-grand.png", slug: "pasino-grand" },
+  { name: "Le Pavillon", logo: "/images/clients/le-pavillon.png", slug: "le-pavillon" },
+  { name: "Burj Immo", logo: "/images/clients/burj-immo.png", slug: "burj-immo" },
+  { name: "Redskins", logo: "/images/clients/redskins.png", slug: "redskins" },
   { name: "She Is Fit", logo: "", slug: "she-is-fit" },
-  { name: "Bat Melech Wigs", logo: "", slug: "bat-melech-wigs" },
+  { name: "Bat Melech Wigs", logo: "/images/clients/bat-melech.png", slug: "bat-melech-wigs" },
+  { name: "Maison Blaggio", logo: "/images/clients/maison-blaggio.png", slug: "maison-blaggio" },
+  { name: "Paclim", logo: "/images/clients/paclim.png", slug: "paclim" },
+  { name: "Street Connexion", logo: "/images/clients/street-connexion.png", slug: "street-connexion" },
+  { name: "Sweet Home", logo: "/images/clients/sweet-home.png", slug: "sweet-home" },
 ];
 
 /* ─── Catégories de clients pour filtrage ─── */
