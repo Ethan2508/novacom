@@ -96,21 +96,19 @@ export default async function ClientPage({ params }: ClientPageProps) {
             </div>
 
             {/* Logo */}
-            <ScrollReveal>
-              <div className="w-full overflow-visible">
-                {client.logo ? (
-                  <img
-                    src={client.logo}
-                    alt={`Logo ${client.name}`}
-                    className="w-full h-auto block"
-                  />
-                ) : (
-                  <span className="font-serif text-8xl italic text-nude/30 block text-center">
-                    {client.name.charAt(0)}
-                  </span>
-                )}
-              </div>
-            </ScrollReveal>
+            <div className="flex items-center justify-center min-w-0">
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={`Logo ${client.name}`}
+                  className="max-w-full h-auto"
+                />
+              ) : (
+                <span className="font-serif text-8xl italic text-nude/30">
+                  {client.name.charAt(0)}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </section>
