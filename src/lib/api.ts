@@ -40,7 +40,8 @@ const LOCAL_LOGOS: Record<string, string> = {
 
 /** Transformer un logo Sanity en URL d'image + résoudre la galerie */
 function resolveClientLogo(client: any): Client {
-  const sanityLogo = client.logo ? urlFor(client.logo).width(200).url() : "";
+  // Vérifier que le logo Sanity a bien un asset (upload terminé)
+  const sanityLogo = client.logo?.asset ? urlFor(client.logo).width(200).url() : "";
   const localLogo = LOCAL_LOGOS[client.slug] || "";
   return {
     ...client,
