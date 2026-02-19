@@ -97,12 +97,12 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
             {/* Logo */}
             <ScrollReveal direction="right">
-              <div className="bg-white border border-creme-dark/15 flex items-center justify-center p-8 md:p-12 rounded-2xl min-h-[200px]">
+              <div className="bg-white border border-creme-dark/15 flex items-center justify-center p-6 md:p-10 rounded-2xl">
                 {client.logo ? (
                   <img
                     src={client.logo}
                     alt={`Logo ${client.name}`}
-                    className="max-w-full max-h-32 object-contain"
+                    style={{ maxWidth: '100%', height: 'auto' }}
                   />
                 ) : (
                   <span className="font-serif text-8xl italic text-nude/30">
