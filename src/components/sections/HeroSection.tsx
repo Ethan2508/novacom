@@ -75,7 +75,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="font-sans text-sm md:text-body-lg text-creme/70 max-w-2xl mx-auto mb-12"
+            className="font-sans text-[0.7rem] md:text-body-lg text-creme/70 max-w-2xl mx-auto mb-12"
           >
             {settings.subtitle}
           </motion.p>
