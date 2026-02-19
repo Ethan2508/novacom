@@ -12,7 +12,7 @@ export const navigation: NavItem[] = [
 export const heroSettings: HeroSettings = {
   title: "Créons ensemble\nvotre histoire",
   subtitle:
-    "Novacom accompagne les marques ambitieuses dans leur communication digitale avec créativité, stratégie et excellence.",
+    "Novacom accompagne les marques ambitieuses dans leur communication digitale avec créativité et stratégie.",
   ctaText: "Découvrir nos services",
   ctaLink: "/services",
   videoUrl: "/videos/hero-bg.mp4",
