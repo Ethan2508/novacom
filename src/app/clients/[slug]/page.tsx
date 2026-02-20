@@ -96,12 +96,12 @@ export default async function ClientPage({ params }: ClientPageProps) {
             </div>
 
             {/* Logo */}
-            <div className="flex items-center justify-center min-w-0">
+            <div className="flex items-center justify-center">
               {client.logo ? (
                 <img
                   src={client.logo}
                   alt={`Logo ${client.name}`}
-                  className="max-w-full h-auto"
+                  style={{ maxWidth: '100%', maxHeight: '120px', width: 'auto', height: 'auto' }}
                 />
               ) : (
                 <span className="font-serif text-8xl italic text-nude/30">
