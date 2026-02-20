@@ -12,33 +12,46 @@ interface HeroSectionProps {
 /**
  * HeroSection — Hero fullscreen avec vidéo background
  * Lecture auto, muet, boucle. Overlay sombre configurable.
+ * Vidéo différente sur mobile vs desktop.
  */
 export default function HeroSection({ settings }: HeroSectionProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoDesktopRef = useRef<HTMLVideoElement>(null);
+  const videoMobileRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Assurer la lecture auto de la vidéo
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay bloqué par le navigateur — silencieux
-      });
-    }
+    // Assurer la lecture auto des vidéos
+    videoDesktopRef.current?.play().catch(() => {});
+    videoMobileRef.current?.play().catch(() => {});
   }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Vidéo background */}
+      {/* Vidéo background - Desktop */}
       <video
-        ref={videoRef}
+        ref={videoDesktopRef}
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
         poster="/images/hero-poster.jpg"
       >
         <source src={settings.videoUrl} type="video/mp4" />
+      </video>
+
+      {/* Vidéo background - Mobile */}
+      <video
+        ref={videoMobileRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover md:hidden"
+        poster="/images/hero-poster.jpg"
+      >
+        <source src="/videos/hero-mobile.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay sombre */}
