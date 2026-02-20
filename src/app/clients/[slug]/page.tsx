@@ -101,7 +101,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                 <img
                   src={client.logo}
                   alt={`Logo ${client.name}`}
-                  style={{ maxWidth: '100%', maxHeight: '120px', width: 'auto', height: 'auto' }}
+                  className="max-h-20 md:max-h-28 w-auto object-contain"
                 />
               ) : (
                 <span className="font-serif text-8xl italic text-nude/30">

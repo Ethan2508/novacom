@@ -21,13 +21,13 @@ export default function ClientCard({ client, index = 0 }: ClientCardProps) {
       >
         <article className="bg-white border border-creme-dark/20 p-8 md:p-10 transition-all duration-600 hover:shadow-lg hover:border-nude/50 rounded-2xl">
           {/* En-tête : logo + catégorie */}
-          <div className="flex items-start justify-between mb-8">
-            <div className="h-12 max-w-[140px] flex items-center justify-start">
+          <div className="flex items-start justify-between mb-8 gap-4">
+            <div className="flex items-center">
               {client.logo ? (
                 <img
                   src={client.logo}
                   alt={`Logo ${client.name}`}
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-10 w-auto object-contain"
                 />
               ) : (
                 <span className="font-serif text-2xl italic text-bordeaux">
