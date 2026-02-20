@@ -40,12 +40,12 @@ const LOCAL_LOGOS: Record<string, string> = {
 
 /** Transformer un logo Sanity en URL d'image + résoudre la galerie */
 function resolveClientLogo(client: any): Client {
-  // Vérifier que le logo Sanity a bien un asset (upload terminé)
-  const sanityLogo = client.logo?.asset ? urlFor(client.logo).width(200).url() : "";
+  // Prioriser les logos locaux quand ils existent
   const localLogo = LOCAL_LOGOS[client.slug] || "";
+  const sanityLogo = client.logo?.asset ? urlFor(client.logo).width(200).url() : "";
   return {
     ...client,
-    logo: sanityLogo || localLogo,
+    logo: localLogo || sanityLogo,  // Local d'abord, puis Sanity
     gallery: client.gallery
       ? client.gallery.map((img: any) => ({
           ...img,
