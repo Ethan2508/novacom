@@ -43,30 +43,10 @@ export default async function ServicesPage() {
               }`}
             >
               <div className="container-wide">
-                <div
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center ${
-                    !isEven ? "md:[direction:rtl]" : ""
-                  }`}
-                >
-                  {/* Partie visuelle / numéro */}
-                  <ScrollReveal direction={isEven ? "left" : "right"}>
-                    <div
-                      className={`${!isEven ? "md:[direction:ltr]" : ""}`}
-                    >
-                      <div className="aspect-square bg-creme flex items-center justify-center">
-                        <span className="font-serif text-[8rem] md:text-[12rem] italic text-nude/20">
-                          {service.icon}
-                        </span>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-
+                <div className="max-w-3xl mx-auto">
                   {/* Contenu */}
-                  <ScrollReveal
-                    direction={isEven ? "right" : "left"}
-                    delay={0.2}
-                  >
-                    <div className={`${!isEven ? "md:[direction:ltr]" : ""}`}>
+                  <ScrollReveal>
+                    <div>
                       {/* Numéro */}
                       <p className="font-serif text-sm italic text-nude mb-4">
                         {String(index + 1).padStart(2, "0")}
