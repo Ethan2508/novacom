@@ -176,6 +176,11 @@ export const clients: Client[] = [
     date: "2025-09",
     order: 1,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/helena-joy/1.png", alt: "Helena Joy 1" },
+      { asset: {}, url: "/images/gallery/helena-joy/2.png", alt: "Helena Joy 2" },
+      { asset: {}, url: "/images/gallery/helena-joy/3.png", alt: "Helena Joy 3" },
+    ],
   },
   {
     _id: "2",
@@ -190,6 +195,9 @@ export const clients: Client[] = [
     date: "2025-08",
     order: 2,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/raphaela-silk/1.jpeg", alt: "Raphaela Silk" },
+    ],
   },
   {
     _id: "3",
@@ -218,6 +226,11 @@ export const clients: Client[] = [
     date: "2025-06",
     order: 4,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/pasino-grand/1.png", alt: "Pasino Grand 1" },
+      { asset: {}, url: "/images/gallery/pasino-grand/2.png", alt: "Pasino Grand 2" },
+      { asset: {}, url: "/images/gallery/pasino-grand/3.png", alt: "Pasino Grand 3" },
+    ],
   },
   {
     _id: "5",
@@ -232,6 +245,9 @@ export const clients: Client[] = [
     date: "2025-05",
     order: 5,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/le-pavillon/1.png", alt: "Le Pavillon Hotel" },
+    ],
   },
   {
     _id: "6",
@@ -246,6 +262,12 @@ export const clients: Client[] = [
     date: "2025-04",
     order: 6,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/burj-immo/1.png", alt: "Burj Immo 1" },
+      { asset: {}, url: "/images/gallery/burj-immo/2.png", alt: "Burj Immo 2" },
+      { asset: {}, url: "/images/gallery/burj-immo/3.png", alt: "Burj Immo 3" },
+      { asset: {}, url: "/images/gallery/burj-immo/4.png", alt: "Burj Immo 4" },
+    ],
   },
   {
     _id: "7",
@@ -260,6 +282,13 @@ export const clients: Client[] = [
     date: "2025-03",
     order: 7,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/redskins/1.jpg", alt: "Redskins 1" },
+      { asset: {}, url: "/images/gallery/redskins/2.jpg", alt: "Redskins 2" },
+      { asset: {}, url: "/images/gallery/redskins/3.jpg", alt: "Redskins 3" },
+      { asset: {}, url: "/images/gallery/redskins/4.jpg", alt: "Redskins 4" },
+      { asset: {}, url: "/images/gallery/redskins/5.jpg", alt: "Redskins 5" },
+    ],
   },
   {
     _id: "8",
@@ -274,6 +303,11 @@ export const clients: Client[] = [
     date: "2025-02",
     order: 8,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/she-is-fit/1.png", alt: "She Is Fit 1" },
+      { asset: {}, url: "/images/gallery/she-is-fit/2.png", alt: "She Is Fit 2" },
+      { asset: {}, url: "/images/gallery/she-is-fit/3.png", alt: "She Is Fit 3" },
+    ],
   },
   {
     _id: "9",
@@ -288,6 +322,11 @@ export const clients: Client[] = [
     date: "2025-01",
     order: 9,
     featured: true,
+    gallery: [
+      { asset: {}, url: "/images/gallery/bat-melech-wigs/1.png", alt: "Bat Melech Wigs 1" },
+      { asset: {}, url: "/images/gallery/bat-melech-wigs/2.png", alt: "Bat Melech Wigs 2" },
+      { asset: {}, url: "/images/gallery/bat-melech-wigs/3.png", alt: "Bat Melech Wigs 3" },
+    ],
   },
   {
     _id: "10",
