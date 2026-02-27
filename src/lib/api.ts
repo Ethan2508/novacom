@@ -38,20 +38,68 @@ const LOCAL_LOGOS: Record<string, string> = {
   "sweet-home": "/images/clients/sweet-home.png",
 };
 
+/** Map slug → galerie locale */
+const LOCAL_GALLERIES: Record<string, { url: string; alt: string }[]> = {
+  "helena-joy": [
+    { url: "/images/gallery/helena-joy/1.png", alt: "Helena Joy 1" },
+    { url: "/images/gallery/helena-joy/2.png", alt: "Helena Joy 2" },
+    { url: "/images/gallery/helena-joy/3.png", alt: "Helena Joy 3" },
+  ],
+  "raphaela-silk": [
+    { url: "/images/gallery/raphaela-silk/1.jpeg", alt: "Raphaela Silk" },
+  ],
+  "pasino-grand": [
+    { url: "/images/gallery/pasino-grand/1.png", alt: "Pasino Grand 1" },
+    { url: "/images/gallery/pasino-grand/2.png", alt: "Pasino Grand 2" },
+    { url: "/images/gallery/pasino-grand/3.png", alt: "Pasino Grand 3" },
+  ],
+  "le-pavillon": [
+    { url: "/images/gallery/le-pavillon/1.png", alt: "Le Pavillon Hotel" },
+  ],
+  "burj-immo": [
+    { url: "/images/gallery/burj-immo/1.png", alt: "Burj Immo 1" },
+    { url: "/images/gallery/burj-immo/2.png", alt: "Burj Immo 2" },
+    { url: "/images/gallery/burj-immo/3.png", alt: "Burj Immo 3" },
+    { url: "/images/gallery/burj-immo/4.png", alt: "Burj Immo 4" },
+  ],
+  "redskins": [
+    { url: "/images/gallery/redskins/1.jpg", alt: "Redskins 1" },
+    { url: "/images/gallery/redskins/2.jpg", alt: "Redskins 2" },
+    { url: "/images/gallery/redskins/3.jpg", alt: "Redskins 3" },
+    { url: "/images/gallery/redskins/4.jpg", alt: "Redskins 4" },
+    { url: "/images/gallery/redskins/5.jpg", alt: "Redskins 5" },
+  ],
+  "she-is-fit": [
+    { url: "/images/gallery/she-is-fit/1.png", alt: "She Is Fit 1" },
+    { url: "/images/gallery/she-is-fit/2.png", alt: "She Is Fit 2" },
+    { url: "/images/gallery/she-is-fit/3.png", alt: "She Is Fit 3" },
+  ],
+  "bat-melech-wigs": [
+    { url: "/images/gallery/bat-melech-wigs/1.png", alt: "Bat Melech Wigs 1" },
+    { url: "/images/gallery/bat-melech-wigs/2.png", alt: "Bat Melech Wigs 2" },
+    { url: "/images/gallery/bat-melech-wigs/3.png", alt: "Bat Melech Wigs 3" },
+  ],
+};
+
 /** Transformer un logo Sanity en URL d'image + résoudre la galerie */
 function resolveClientLogo(client: any): Client {
   // Prioriser les logos locaux quand ils existent
   const localLogo = LOCAL_LOGOS[client.slug] || "";
   const sanityLogo = client.logo?.asset ? urlFor(client.logo).width(200).url() : "";
+  
+  // Prioriser les galeries locales
+  const localGallery = LOCAL_GALLERIES[client.slug] || [];
+  const sanityGallery = client.gallery?.length
+    ? client.gallery.map((img: any) => ({
+        ...img,
+        url: urlFor(img.asset).width(800).url(),
+      }))
+    : [];
+    
   return {
     ...client,
-    logo: localLogo || sanityLogo,  // Local d'abord, puis Sanity
-    gallery: client.gallery
-      ? client.gallery.map((img: any) => ({
-          ...img,
-          url: urlFor(img.asset).width(800).url(),
-        }))
-      : [],
+    logo: localLogo || sanityLogo,
+    gallery: localGallery.length > 0 ? localGallery : sanityGallery,
   };
 }
 
